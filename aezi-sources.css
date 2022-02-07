@@ -1,0 +1,7 @@
+.socials {
+    color:chartreuse;
+}
+
+.socials:hover {
+    color: springgreen;
+}
