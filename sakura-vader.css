@@ -70,16 +70,16 @@
   
   a {
     text-decoration: none;
-    color: #AFE1AF;
+    color: #6495ED;
   }
   
   a:hover {
-      color: #DA4453;
+      color: #7DF9FF;
       border-bottom: 2px solid #d9d8dc; 
   }
   
   a:visited {
-      color: #e26f7a; 
+      color: #0096FF; 
   }
   
   ul {
