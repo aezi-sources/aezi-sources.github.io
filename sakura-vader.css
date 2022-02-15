@@ -69,7 +69,8 @@
     border-color: #eb99a1; }
   
   a {
-    text-decoration: none; 
+    text-decoration: none;
+    color: #AFE1AF;
   }
   
   a:hover {
