@@ -9,3 +9,7 @@
 .complete {
     color: #AFE1AF;
 }
+
+.complete:hover {
+    color: #50C878;
+}
