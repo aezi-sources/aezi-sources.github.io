@@ -78,10 +78,12 @@
       border-bottom: 2px solid #d9d8dc; 
   }
   
+/*
   a:visited {
       color: #0096FF; 
   }
-  
+  */
+
   ul {
     padding-left: 1.4em;
     margin-top: 0px;
