@@ -15,11 +15,15 @@
   body {
     font-size: 1.8rem;
     line-height: 1.618;
-    max-width: 38em;
+    max-width: 65em;
     margin: auto;
     color: #d9d8dc;
     background-color: #120c0e;
     padding: 13px; }
+  
+  @media (max-width: 1200px) {
+    body {
+      max-width: 55em; } }
   
   @media (max-width: 684px) {
     body {
@@ -134,17 +138,116 @@
   
   /* Tables */
   table {
-    text-align: justify;
-    width: 120%;
+    text-align: left;
+    width: 110%;
+    margin-left: -5%;
     border-collapse: collapse;
-    border: 1px solid #40363a; 
+    border: 1px solid #40363a;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    table-layout: fixed;
   }
   
   td, th {
-    padding: 0.3em;
+    padding: 0.8em 0.9em;
     border-bottom: 1px solid #40363a; 
     border-left: 1px solid #40363a;
+    vertical-align: top;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
    }
+   
+  /* Column width control */
+  th:nth-child(1), td:nth-child(1) { /* Project Name */
+    width: 20%;
+  }
+  th:nth-child(2), td:nth-child(2) { /* Description */
+    width: 35%;
+  }
+  th:nth-child(3), td:nth-child(3) { /* Link */
+    width: 15%;
+  }
+  th:nth-child(4), td:nth-child(4) { /* Github Link */
+    width: 15%;
+  }
+  th:nth-child(5), td:nth-child(5) { /* Complete */
+    width: 15%;
+  }
+   
+  th {
+    font-weight: 600;
+    text-align: center;
+   }
+  
+  /* Mobile responsive table - Force responsive behavior */
+  @media screen and (max-width: 767px) {
+    table, table * {
+      box-sizing: border-box;
+    }
+    
+    table {
+      width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      table-layout: auto !important;
+      border: none !important;
+      display: block !important;
+      overflow-x: visible !important;
+    }
+    
+    thead, thead tr, thead th {
+      display: none !important;
+    }
+    
+    tbody {
+      display: block !important;
+      width: 100% !important;
+    }
+    
+    tr {
+      display: block !important;
+      width: 100% !important;
+      margin-bottom: 1rem !important;
+      border: 1px solid #40363a !important;
+      padding: 0.8rem !important;
+      background-color: rgba(64, 54, 58, 0.1) !important;
+      box-shadow: none !important;
+    }
+    
+    td {
+      display: block !important;
+      width: 100% !important;
+      text-align: left !important;
+      border: none !important;
+      border-bottom: none !important;
+      border-left: none !important;
+      padding: 0.3rem 0 !important;
+      position: relative !important;
+      padding-left: 40% !important;
+      white-space: normal !important;
+    }
+    
+    td:before {
+      content: attr(data-label) ": " !important;
+      position: absolute !important;
+      left: 0 !important;
+      width: 35% !important;
+      font-weight: bold !important;
+      text-align: left !important;
+      color: #d9d8dc !important;
+      white-space: nowrap !important;
+    }
+    
+    /* Reset all column widths for mobile */
+    th:nth-child(1), td:nth-child(1),
+    th:nth-child(2), td:nth-child(2),
+    th:nth-child(3), td:nth-child(3),
+    th:nth-child(4), td:nth-child(4),
+    th:nth-child(5), td:nth-child(5) {
+      width: auto !important;
+      min-width: auto !important;
+    }
+  }
   
   /* Buttons, forms and input */
   input, textarea {
